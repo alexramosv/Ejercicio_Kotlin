@@ -5831,10 +5831,10 @@ class EquipoXogadores(private var nome:String) {
 
     fun maximoAnotador() {
         var puntosXog1= xogador1.mediaPuntos()
-        var puntosXog2= xogador1.mediaPuntos()
-        var puntosXog3= xogador1.mediaPuntos()
-        var puntosXog4= xogador1.mediaPuntos()
-        var puntosXog5= xogador1.mediaPuntos()
+        var puntosXog2= xogador2.mediaPuntos()
+        var puntosXog3= xogador3.mediaPuntos()
+        var puntosXog4= xogador4.mediaPuntos()
+        var puntosXog5= xogador5.mediaPuntos()
 
         var maximo=0
 
@@ -8911,5 +8911,114 @@ fun main() {
 
 */
 
-// hola
-// adios
+////////////////////////////////////////////////////////////////////////////////
+// Ejercicio para Adri de la 1ª parte de programación
+////////////////////////////////////////////////////////////////////////////////
+
+
+// Crea una función para almacenar los votos de una encuesta de dos posibles
+//respuestas (Ej. ¿Lee libros habitualmente?(S/N), ¿Quién es el mejor jugador de fútbol del
+//mundo, Leo Messi o Cristiano Ronaldo?).
+//Las variables de los votos VotosA y VotosB se iniciarán a false indicando con este valor que no
+//se han emitido votos hasta el momento para ninguna de las dos respuestas.
+
+// La función tiene que incluir las siguiente subfunciones:
+//• incA : Aumenta el número de votosA en 1
+//• incB: Aumenta el número de votosB en 1
+//• totalVotos: Devuelve la suma de los votos de las dos posibles respuestas.
+//• porcentajeA: Devuelve el porcentaje de votosA.
+//o (votosA/totalVotos)*100
+//• porcentajeB: Devuelve el porcentaje de votosB.
+//o (votosB/totalVotos)*100
+//
+//Las funciones que calculan el porcentaje pueden fallar si se ejecutan cuando el número total
+//de votos es cero, puesto que se haría una división por cero. Obviamente si no existen votos los
+//porcentajes deben devolver cero y evitar la división. Añade esta corrección a dichas funciones
+//(PISTA: Emplea un condicional If).
+//
+//Incrementa el número de veces que quieras los votos de las dos respuestas y muestra por
+//pantalla la pregunta, el total de votos, votas A, votos B y los porcentajes de ambas respuestas.
+
+/*
+
+fun main() {
+
+    // Declarar todas las variables y contadores
+    var pregunta = "Quien es mejor? CR7 o M10?"
+    var votosA = false
+    var votosB = false
+
+    var contador1 = 0
+    var contador2 = 0
+    var repeticion = 0
+    var votacionesTotales = 0
+    var votacA = 0
+    var votacB = 0
+
+
+    // Función que se llamará para que el contador de los votos A cuante +1
+    fun incA() {
+        contador1 = contador1 + 1
+    }
+
+    // Función que se llamará para que el contador de los votos B cuante +1
+    fun incB() {
+        contador2 = contador2 + 1
+    }
+
+    // Función que se llamará para contar todos los votos de A y B y le sume +1
+    fun votosTotales() {
+        votacionesTotales += 1
+    }
+
+    // Función para calcular el porcentaje de los votos A
+    fun porcentajeA(): Int {
+        votacA = contador1*100/votacionesTotales
+        return votacA
+    }
+
+    // Función para calcular el porcentaje de los votos B
+    fun porcentajeB(): Int {
+        votacB = contador2*100/votacionesTotales
+        return votacB
+    }
+
+    // Función para estar preguntando varias veces y registrar disitintos votos
+    fun preguntar() {
+
+        // Se crea una variable cualquiera (repetición) y se pone a 0 para que se esté ejecutando miestras se cumpla esa condición
+        while (repeticion == 0) {
+            println("$pregunta (responder con true or false)")
+            println("Opción 1")
+            votosA = readLine()!!.toBooleanStrict()
+            println("Opción 2")
+            votosB = readLine()!!.toBooleanStrict()
+
+            // Si votos A es true que llame a la función incA() que contaba +1
+            if (votosA == true) {
+                incA()
+            } else if (votosB == true) {    //Lo mismo para el B
+                incB()
+            } else if (votosA == false && votosB == false) {    // Si los dos son falsos que se pare el while
+                break
+            }
+            votosTotales()
+        }
+
+        println("Los resultados a la pregunta $pregunta son: ")
+        println("Votos Cris $contador1")
+        println("Votos Messi $contador2")
+        println("Votos totales $votacionesTotales")
+        println("El porcentaje de la 1ª respuesta es ${porcentajeA()}%")
+        println("El porcentaje de la 2ª respuesta es ${porcentajeB()}%")
+
+    }
+
+    // Fuera de la función preguntar, la llamamos para que ejecute todoel código de dentro
+    preguntar()
+
+}
+
+ */
+
+
